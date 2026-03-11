@@ -1,14 +1,39 @@
-black
-flake8
-ipython
-isort
-jupyterlab
-matplotlib
-mkdocs
-notebook
+# Core
+python-dotenv
+
+# Data Science - Core
 numpy
 pandas
-pip
-python-dotenv
+scipy
+
+# Machine Learning
 scikit-learn
+torch
+torchvision
+torchaudio
+
+# Visualization
+matplotlib
+seaborn
+plotly
+kaleido
+
+# Jupyter
+jupyterlab
+notebook
+ipython
+ipywidgets
+
+# Data I/O
+openpyxl
+pyarrow
+requests
+
+# Dev Tools
+black
+flake8
+isort
+mkdocs
+pip
+
 -e .

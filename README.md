@@ -1,61 +1,70 @@
-# Personal Project: Adelaide Metrocard Validation
+# Data Scientist Sandbox
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
+A hands-on Python sandbox for data science practice — covering **NumPy**, **Pandas**, **PyTorch**, and **Plotly** with step-by-step notebooks and real example datasets.
 
-This is my analytic pro
+## Quick Start
 
-## Project Organization
+```bash
+# 1. Create virtual environment
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 
-```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         personal_project:_adelaide_metrocard_validation and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── personal_project:_adelaide_metrocard_validation   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes personal_project:_adelaide_metrocard_validation a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Launch JupyterLab
+jupyter lab
 ```
 
---------
+## Practice Notebooks
 
+| # | Notebook | Topics |
+|---|----------|--------|
+| 01 | `notebooks/01-numpy-fundamentals.ipynb` | Arrays, broadcasting, linear algebra, random |
+| 02 | `notebooks/02-pandas-fundamentals.ipynb` | DataFrames, cleaning, groupby, merge, time series |
+| 03 | `notebooks/03-plotly-visualization.ipynb` | Line, bar, scatter, heatmap, interactive charts |
+| 04 | `notebooks/04-pytorch-basics.ipynb` | Tensors, autograd, simple neural network |
+
+## Project Structure
+
+```
+├── README.md
+├── requirements.txt          <- pip install -r requirements.txt
+├── pyproject.toml
+│
+├── notebooks/                <- Step-by-step practice notebooks
+│   ├── 01-numpy-fundamentals.ipynb
+│   ├── 02-pandas-fundamentals.ipynb
+│   ├── 03-plotly-visualization.ipynb
+│   └── 04-pytorch-basics.ipynb
+│
+├── data/
+│   ├── raw/                  <- Original datasets
+│   ├── processed/            <- Cleaned/transformed data
+│   └── external/             <- Third-party data
+│
+├── ds_sandbox/               <- Reusable helper modules
+│   ├── __init__.py
+│   ├── config.py
+│   ├── dataset.py
+│   ├── features.py
+│   └── plots.py
+│
+├── models/                   <- Saved model weights
+└── reports/figures/          <- Exported charts
+```
+
+## Stack
+
+| Library | Version | Use |
+|---------|---------|-----|
+| `numpy` | >=1.24 | Numerical computing |
+| `pandas` | >=2.0 | Data manipulation |
+| `torch` | >=2.0 | Deep learning |
+| `plotly` | >=5.0 | Interactive visualization |
+| `scikit-learn` | >=1.3 | ML utilities & datasets |
+| `scipy` | >=1.10 | Scientific computing |
+| `seaborn` | latest | Statistical plots |
+
+---
+*Built with [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org/)*
